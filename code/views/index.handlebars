@@ -1,0 +1,36 @@
+<h1>Eat Da Burger</h1>
+<h2>Nom nom</h2>
+{{#each items}}
+{{#if devoured}}
+{{else}}
+<div class="burger">
+    <p>{{id}}</p>
+    <p>{{burger_name}} <button class="button" data={{id}}>Devour</button></p>
+</div>
+{{/if}}
+{{/each}}
+
+<h2>Devoured</h2>
+{{#each items}}
+{{#if devoured}}
+<div class="burger">
+    <p>{{id}}</p>
+    <p>{{burger_name}}</p>
+</div>
+{{else}}
+{{/if}}
+{{/each}}
+
+
+<script>
+    $(".button").on("click", function () {
+        var id = $(this).attr("data");
+        console.log(id);
+        var body = { id: id };
+        $.post("/add-burger", body, function (data) {
+            console.log(data);
+            location.reload();
+        });
+    })
+
+</script>
