@@ -16,9 +16,7 @@ app.set("view engine", "handlebars");
 
 app.get("/", function(req, res){
     connection.query("SELECT * FROM burgers", function(err, data){
-        res.render("index", {
-            items: data
-        });
+        res.render("index", {items: data});
     });
 });
 
@@ -30,7 +28,8 @@ app.post("/add-burger", function(req, res){
 })
 
 
-
+app.post("/add-burger", function(req, res){
+    connection
 
 
 

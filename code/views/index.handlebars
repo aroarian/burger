@@ -1,5 +1,11 @@
 <h1>Eat Da Burger</h1>
 <h2>Nom nom</h2>
+
+<form>
+  Add a burger <input type="text" id="add" name="addBurger"><br>
+
+<button class="submit">Add</button>
+</form>
 {{#each items}}
 {{#if devoured}}
 {{else}}
@@ -25,12 +31,20 @@
 <script>
     $(".button").on("click", function () {
         var id = $(this).attr("data");
-        console.log(id);
+        
         var body = { id: id };
         $.post("/add-burger", body, function (data) {
             console.log(data);
-            location.reload();
+           
         });
-    })
+        window.location.reload();
+    });
+
+    $(".submit").on("click", function (){
+        var add = $("#add").val();
+        console.log(add)
+
+        
+});
 
 </script>
