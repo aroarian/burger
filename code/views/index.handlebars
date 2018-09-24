@@ -28,23 +28,29 @@
 {{/each}}
 
 
-<script>
+{{!-- <script>
     $(".button").on("click", function () {
         var id = $(this).attr("data");
         
         var body = { id: id };
-        $.post("/add-burger", body, function (data) {
-            console.log(data);
+        $.post("/eat-burger", body, function (data) {
+           // console.log(data);
            
         });
-        window.location.reload();
+       window.location.reload();
     });
 
-    $(".submit").on("click", function (){
+    $(".submit").on("click", function (e){
+        e.preventDefault();
         var add = $("#add").val();
-        console.log(add)
+
+        console.log(add);
+         var body = { add: add };
+       $.post("/addBurger", body, function (data){
+        
+       });
 
         
 });
 
-</script>
+</script> --}}

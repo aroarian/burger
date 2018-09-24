@@ -6,7 +6,7 @@ VALUES(
     "house", false
 ),
 (
-    "bbq burgder", true
+    "bbq burger", true
 ),
 (
     "veggie", false
