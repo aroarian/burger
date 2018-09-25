@@ -1,0 +1,48 @@
+.container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title{
+    padding-top:25px;
+    padding-bottom:25px;
+    text-align: center;
+    background-color: rgb(231, 206, 62);
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.eat{
+    background-color: rgb(104, 231, 104);
+    text-align: center;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.tomato{
+   background-color:rgb(219, 63, 63);
+   padding-top:5px;
+   padding-bottom:5px;
+}
+
+.divForm{
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+.divForm input{
+    width: 200px;
+}
+
+.burger{
+    background-color:rgb(110, 75, 0);
+    border-top:4px solid rgb(255, 238, 0);
+    padding-top:3px;
+   padding-bottom:3px;
+}
+.burger p{
+    float:left;
+}

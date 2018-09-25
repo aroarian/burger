@@ -1,14 +1,15 @@
 <div class="container">
-<h1>Eat Da Burger</h1>
-<h2>Nom nom</h2>
+<h1 class="title">Eat Da Burger</h1>
+<h2 class="eat">Nom nom</h2>
+<div class="tomato">
 <div class="divForm">
 <p>Add a burger you would like to eat!</p>
 <form action="/add-burger" method="POST">
 <input type="text" name="burger_name" class="burgerForm" value="" id="burgerText">
-<button type="submit" class="button" id="formButton">Submit</button>  
+<button type="submit" class="button" id="formButton">Submit</button>
 </form>
 </div>
-
+</div>
 {{#each items}}
 {{#if devoured}}
 {{else}}
@@ -24,7 +25,7 @@
 <h2>Devoured</h2>
 {{#each items}}
 {{#if devoured}}
-<div class="burger">
+<div class="noCheese">
     <p>{{id}}. {{burger_name}}</p>
 </div>
 {{else}}
