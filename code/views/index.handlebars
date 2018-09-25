@@ -1,17 +1,22 @@
+<div class="container">
 <h1>Eat Da Burger</h1>
 <h2>Nom nom</h2>
-
-<form>
-  Add a burger <input type="text" id="add" name="addBurger"><br>
-
-<button class="submit">Add</button>
+<div class="divForm">
+<p>Add a burger you would like to eat!</p>
+<form action="/add-burger" method="POST">
+<input type="text" name="burger_name" class="burgerForm" value="" id="burgerText">
+<button type="submit" class="button" id="formButton">Submit</button>  
 </form>
+</div>
+
 {{#each items}}
 {{#if devoured}}
 {{else}}
 <div class="burger">
-    <p>{{id}}</p>
-    <p>{{burger_name}} <button class="button" data={{id}}>Devour</button></p>
+    <p>{{id}}. {{burger_name}} <form method="POST" action="/burgers/update?_method=PUT" class="button">
+    <input type="hidden" name="id" type="text" value={{id}}>
+    <button type="submit" class="button">Devour!</button>
+    </form></p>
 </div>
 {{/if}}
 {{/each}}
@@ -20,37 +25,9 @@
 {{#each items}}
 {{#if devoured}}
 <div class="burger">
-    <p>{{id}}</p>
-    <p>{{burger_name}}</p>
+    <p>{{id}}. {{burger_name}}</p>
 </div>
 {{else}}
 {{/if}}
 {{/each}}
-
-
-{{!-- <script>
-    $(".button").on("click", function () {
-        var id = $(this).attr("data");
-        
-        var body = { id: id };
-        $.post("/eat-burger", body, function (data) {
-           // console.log(data);
-           
-        });
-       window.location.reload();
-    });
-
-    $(".submit").on("click", function (e){
-        e.preventDefault();
-        var add = $("#add").val();
-
-        console.log(add);
-         var body = { add: add };
-       $.post("/addBurger", body, function (data){
-        
-       });
-
-        
-});
-
-</script> --}}
+</div>
