@@ -1,6 +1,6 @@
 var express = require("express");
 var exphbs = require("express-handlebars");
-var connection = require("../code/config/connection.js");
+var connection = require("./config/connection.js");
 var bodyParser = require("body-parser");
 var router = require("./controllers/burgers_controller.js");
 var methodOverride = require("method-override");
