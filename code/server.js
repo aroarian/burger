@@ -1,6 +1,6 @@
 var express = require("express");
 var exphbs = require("express-handlebars");
-var connection = require("../code/config/connection.js")
+var connection = require("../code/config/connection.js");
 var bodyParser = require("body-parser");
 var router = require("./controllers/burgers_controller.js");
 var methodOverride = require("method-override");
@@ -8,8 +8,8 @@ var methodOverride = require("method-override");
 var app = express();
 var PORT = 3000;
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
 app.use("/", router);
@@ -22,11 +22,3 @@ app.use(express.static("public"));
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
-
-
-
-
-
-
-
-

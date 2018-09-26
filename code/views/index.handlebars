@@ -1,34 +1,36 @@
 <div class="container">
-<h1 class="title">Eat Da Burger</h1>
-<h2 class="eat">Nom nom</h2>
-<div class="tomato">
-<div class="divForm">
-<p>Add a burger you would like to eat!</p>
-<form action="/add-burger" method="POST">
-<input type="text" name="burger_name" class="burgerForm" value="" id="burgerText">
-<button type="submit" class="button" id="formButton">Submit</button>
-</form>
-</div>
-</div>
-{{#each items}}
-{{#if devoured}}
-{{else}}
-<div class="burger">
-    <p>{{id}}. {{burger_name}} <form method="POST" action="/burgers/update?_method=PUT" class="button">
-    <input type="hidden" name="id" type="text" value={{id}}>
-    <button type="submit" class="button">Devour!</button>
-    </form></p>
-</div>
-{{/if}}
-{{/each}}
+    <h1 class="title">Eat Da Burger</h1>
+    <h2 class="eat">Nom nom!</h2>
+    <div class="tomato">
+        <div class="divForm">
+            <p>Add a burger you would like to eat!</p>
+            <form action="/add-burger" method="POST">
+                <input type="text" name="burger_name" class="burgerForm" value="" id="burgerText">
+                <button type="submit" class="button" id="formButton">Submit</button>
+            </form>
+        </div>
+    </div>
+    {{#each items}}
+    {{#if devoured}}
+    {{else}}
+    <div class="burger">
+        <p>{{id}}. {{burger_name}} <form method="POST" action="update-burger?_method=PUT" class="button">
+                <input type="hidden" name="id" type="text" value={{id}}>
+                <button type="submit" class="devour">Devour!</button>
+            </form>
+        </p>
+    </div>
+    {{/if}}
+    {{/each}}
 
-<h2>Devoured</h2>
-{{#each items}}
-{{#if devoured}}
-<div class="noCheese">
-    <p>{{id}}. {{burger_name}}</p>
-</div>
-{{else}}
-{{/if}}
-{{/each}}
+    <h2 class="bun">Devoured</h2>
+    {{#each items}}
+    {{#if devoured}}
+    <div class="bottomBurger">
+        <p>{{id}}. {{burger_name}}</p>
+    </div>
+    {{else}}
+    {{/if}}
+    {{/each}}
+    <div class="bottomBun"></div>
 </div>

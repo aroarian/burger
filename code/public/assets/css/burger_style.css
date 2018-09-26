@@ -1,48 +1,154 @@
-.container{
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+body {
+  background-image: url("../img/french.jpg");
+  background-size: 100%;
+}
+.container {
+  width: 50%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.title{
-    padding-top:25px;
-    padding-bottom:25px;
-    text-align: center;
-    background-color: rgb(231, 206, 62);
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
+.title {
+  margin-top: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-image: linear-gradient(rgb(231, 206, 62), rgb(151, 121, 37));
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  font-family: "Acme", sans-serif;
+  letter-spacing: 3px;
+  font-size: 25px;
+  color: rgb(243, 224, 116);
 }
 
-.eat{
-    background-color: rgb(104, 231, 104);
-    text-align: center;
-    padding-top:5px;
-    padding-bottom:5px;
+.eat {
+  background-color: rgb(104, 231, 104);
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-family: "Acme", sans-serif;
+  letter-spacing: 3px;
+  font-size: 22px;
+  color: green;
 }
 
-.tomato{
-   background-color:rgb(219, 63, 63);
-   padding-top:5px;
-   padding-bottom:5px;
+.devour {
+  width: 100%;
+  outline: none;
+  border: 2px solid rgb(163, 112, 1);
+  padding: 5px;
+  background-color: rgb(77, 52, 1);
+  margin-top: 5px;
+  color: rgb(163, 112, 1);
+  font-weight: bold;
+  font-family: "Acme", sans-serif;
+  letter-spacing: 3px;
+  font-size: 18px;
 }
 
-.divForm{
-    text-align: center;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;  
+.devour:hover {
+  color: rgb(206, 149, 27);
+  background-color: rgb(56, 38, 1);
 }
 
-.divForm input{
-    width: 200px;
+.tomato {
+  background-color: rgb(219, 63, 63);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Signika", sans-serif;
 }
 
-.burger{
-    background-color:rgb(110, 75, 0);
-    border-top:4px solid rgb(255, 238, 0);
-    padding-top:3px;
-   padding-bottom:3px;
+.divForm {
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(117, 5, 5);
 }
-.burger p{
-    float:left;
+
+.divForm input {
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 3px;
+  padding-left: 5px;
+  border: none;
+  background-color: rgb(241, 113, 113);
+  color: rgb(117, 5, 5);
+  font-weight: bold;
+}
+
+#formButton {
+  background-color: rgb(241, 113, 113);
+  color: rgb(117, 5, 5);
+  font-weight: bold;
+  font-family: "Acme", sans-serif;
+  border: none;
+  margin-left: 5px;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#formButton:hover {
+  background-color: rgb(247, 165, 165);
+  color: rgb(168, 32, 32);
+}
+
+.burger {
+  text-align: center;
+  background-image: linear-gradient(rgb(110, 75, 0), rgb(77, 52, 1));
+  border-top: 5px solid rgb(255, 238, 0);
+  padding-top: 11px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.bottomBurger {
+  text-align: center;
+  background-image: linear-gradient(rgb(110, 75, 0), rgb(77, 52, 1));
+  border-top: 4px solid rgb(255, 238, 0);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.burger p {
+  text-align: center;
+  color: rgb(206, 149, 27);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Signika", sans-serif;
+}
+
+.bottomBurger p {
+  text-align: center;
+  color: rgb(206, 149, 27);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Signika", sans-serif;
+}
+
+.bun {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  text-align: center;
+  background-image: linear-gradient(rgb(231, 206, 62), rgb(151, 121, 37));
+  font-family: "Acme", sans-serif;
+  letter-spacing: 3px;
+  font-size: 25px;
+  color: rgb(243, 224, 116);
+}
+
+.bottomBun {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  background-image: linear-gradient(rgb(231, 206, 62), rgb(151, 121, 37));
+  margin-bottom: 25px;
 }
